@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="AppCtrl">
+    <head>
+        <title>Thief Database</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+        <script src="controllers/controller.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head> 
+    
+    <body>
+        
+            <div class="container" ng-controller="AppCtrl">
+            <h1>Thief Database</h1>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>GENDER</th>
+                        <th>AGE</th>
+                        <th>YEAR</th>
+                        <th>ACTION</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input class="form-control" ng-model="t.name"></td>
+                        <td><input class="form-control" ng-model="t.gender"></td>
+                        <td><input class="form-control" ng-model="t.age"></td>
+                        <td><input class="form-control" ng-model="t.year"></td>
+                        <td><button class="btn btn-success" ng-click="adddata()">Add Record</button></td>
+                        <td><button class="btn btn-success" ng-click="moddata()">Update</button></td>
+                        
+                        
+                    
+                    </tr>
+                        <tr ng-repeat="thieve in thieveList">
+                        <td>{{thieve.name}}</td>
+                        <td>{{thieve.gender}}</td>
+                        <td>{{thieve.age}}</td>
+                        <td>{{thieve.year}}</td>
+                        <td><button class="btn btn-danger" ng-click="deldata(thieve._id)">Delete Record</button></td>
+                        <td><button class="btn btn-warning" ng-click="editdata(thieve._id)">Edit</button></td>
+                    </tr>
+                </tbody>        
+            </table>
+        </div>
+    </body>   
+   
+</html>
