@@ -3,8 +3,8 @@ Steps for executing the web application:
 1.Start your mongodb
 2.Create a database 'thief'
 3.Create a collecton 'thief'
-4.Insert some data in the following ways-> name:"Shaitan Singh",gender:"M",age:"43",year:"2018".
-5.Now on terminal go to the directory where you coppied the 'app' folder.
+4.Insert some data in the following ways-> name:"Shaitan Singh",gender:"M",age:"43",year:"2018"
+5.Now on terminal go to the directory where you cloned the repository folder.
 6.Execute the following-> node server
 7.Now on any browser open portnumber:3000
 8.All done....
